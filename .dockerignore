@@ -1,0 +1,17 @@
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Virtual environments
+venv/
+.venv/
+ENV/
+env/
+
+# Git files
+.git/
+.gitignore
+
+# OS junk
+.DS_Store

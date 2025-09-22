@@ -1,0 +1,127 @@
+<svg viewBox="0 0 1200 600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1200" height="600" fill="#f8fafc"/>
+  
+  <!-- Title -->
+  <text x="600" y="40" text-anchor="middle" font-size="24" font-weight="bold" fill="#1e293b">
+    Spam Detection System Architecture
+  </text>
+  
+  <!-- User Input Section -->
+  <g>
+    <rect x="50" y="100" width="150" height="80" rx="10" fill="#3b82f6" stroke="#1d4ed8" stroke-width="2"/>
+    <text x="125" y="125" text-anchor="middle" font-size="12" font-weight="bold" fill="white">User Interface</text>
+    <text x="125" y="145" text-anchor="middle" font-size="10" fill="white">(Streamlit)</text>
+    <text x="125" y="165" text-anchor="middle" font-size="10" fill="white">SMS Input</text>
+  </g>
+  
+  <!-- Arrow 1 -->
+  <path d="M200 140 L270 140" stroke="#64748b" stroke-width="3" fill="none" marker-end="url(#arrowhead)"/>
+  <text x="235" y="130" text-anchor="middle" font-size="10" fill="#64748b">Raw Text</text>
+  
+  <!-- Text Preprocessing -->
+  <g>
+    <rect x="280" y="100" width="150" height="80" rx="10" fill="#10b981" stroke="#059669" stroke-width="2"/>
+    <text x="355" y="120" text-anchor="middle" font-size="12" font-weight="bold" fill="white">Text Preprocessing</text>
+    <text x="355" y="135" text-anchor="middle" font-size="9" fill="white">• Lowercase conversion</text>
+    <text x="355" y="150" text-anchor="middle" font-size="9" fill="white">• Remove punctuation</text>
+    <text x="355" y="165" text-anchor="middle" font-size="9" fill="white">• Tokenization (NLTK)</text>
+  </g>
+  
+  <!-- Arrow 2 -->
+  <path d="M430 140 L500 140" stroke="#64748b" stroke-width="3" fill="none" marker-end="url(#arrowhead)"/>
+  <text x="465" y="130" text-anchor="middle" font-size="10" fill="#64748b">Clean Text</text>
+  
+  <!-- Feature Extraction -->
+  <g>
+    <rect x="510" y="100" width="150" height="80" rx="10" fill="#f59e0b" stroke="#d97706" stroke-width="2"/>
+    <text x="585" y="120" text-anchor="middle" font-size="12" font-weight="bold" fill="white">Feature Extraction</text>
+    <text x="585" y="135" text-anchor="middle" font-size="9" fill="white">• TF-IDF Vectorization</text>
+    <text x="585" y="150" text-anchor="middle" font-size="9" fill="white">• N-gram features</text>
+    <text x="585" y="165" text-anchor="middle" font-size="9" fill="white">• Numerical vectors</text>
+  </g>
+  
+  <!-- Arrow 3 -->
+  <path d="M660 140 L730 140" stroke="#64748b" stroke-width="3" fill="none" marker-end="url(#arrowhead)"/>
+  <text x="695" y="130" text-anchor="middle" font-size="10" fill="#64748b">Features</text>
+  
+  <!-- ML Model -->
+  <g>
+    <rect x="740" y="100" width="150" height="80" rx="10" fill="#8b5cf6" stroke="#7c3aed" stroke-width="2"/>
+    <text x="815" y="120" text-anchor="middle" font-size="12" font-weight="bold" fill="white">ML Classifier</text>
+    <text x="815" y="135" text-anchor="middle" font-size="9" fill="white">• Trained Model</text>
+    <text x="815" y="150" text-anchor="middle" font-size="9" fill="white">• Scikit-learn</text>
+    <text x="815" y="165" text-anchor="middle" font-size="9" fill="white">• Binary Classification</text>
+  </g>
+  
+  <!-- Arrow 4 -->
+  <path d="M890 140 L960 140" stroke="#64748b" stroke-width="3" fill="none" marker-end="url(#arrowhead)"/>
+  <text x="925" y="130" text-anchor="middle" font-size="10" fill="#64748b">Prediction</text>
+  
+  <!-- Output -->
+  <g>
+    <rect x="970" y="100" width="150" height="80" rx="10" fill="#ef4444" stroke="#dc2626" stroke-width="2"/>
+    <text x="1045" y="125" text-anchor="middle" font-size="12" font-weight="bold" fill="white">Classification Result</text>
+    <text x="1045" y="145" text-anchor="middle" font-size="10" fill="white">SPAM / HAM</text>
+    <text x="1045" y="165" text-anchor="middle" font-size="10" fill="white">+ Confidence Score</text>
+  </g>
+  
+  <!-- Data Flow Labels -->
+  <text x="600" y="250" text-anchor="middle" font-size="16" font-weight="bold" fill="#374151">Data Flow Pipeline</text>
+  
+  <!-- Dataset Section -->
+  <g>
+    <rect x="200" y="300" width="200" height="100" rx="10" fill="#6366f1" stroke="#4f46e5" stroke-width="2"/>
+    <text x="300" y="325" text-anchor="middle" font-size="14" font-weight="bold" fill="white">Training Dataset</text>
+    <text x="300" y="345" text-anchor="middle" font-size="11" fill="white">SMS Spam Collection</text>
+    <text x="300" y="365" text-anchor="middle" font-size="11" fill="white">5,574 messages</text>
+    <text x="300" y="385" text-anchor="middle" font-size="11" fill="white">Labeled: Spam/Ham</text>
+  </g>
+  
+  <!-- Model Training Arrow -->
+  <path d="M400 350 L740 180" stroke="#64748b" stroke-width="2" fill="none" stroke-dasharray="5,5" marker-end="url(#arrowhead)"/>
+  <text x="550" y="270" text-anchor="middle" font-size="10" fill="#64748b" transform="rotate(-15 550 270)">Model Training</text>
+  
+  <!-- Technology Stack -->
+  <g>
+    <rect x="600" y="300" width="400" height="200" rx="10" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="2"/>
+    <text x="800" y="325" text-anchor="middle" font-size="16" font-weight="bold" fill="#374151">Technology Stack</text>
+    
+    <!-- Python -->
+    <circle cx="650" cy="360" r="25" fill="#3776ab"/>
+    <text x="650" y="367" text-anchor="middle" font-size="10" font-weight="bold" fill="white">Python</text>
+    <text x="650" y="395" text-anchor="middle" font-size="9" fill="#374151">3.10+</text>
+    
+    <!-- Streamlit -->
+    <circle cx="750" cy="360" r="25" fill="#ff4b4b"/>
+    <text x="750" y="367" text-anchor="middle" font-size="10" font-weight="bold" fill="white">Streamlit</text>
+    <text x="750" y="395" text-anchor="middle" font-size="9" fill="#374151">Web UI</text>
+    
+    <!-- Scikit-learn -->
+    <circle cx="850" cy="360" r="25" fill="#f7931e"/>
+    <text x="850" y="367" text-anchor="middle" font-size="10" font-weight="bold" fill="white">Sklearn</text>
+    <text x="850" y="395" text-anchor="middle" font-size="9" fill="#374151">ML Models</text>
+    
+    <!-- NLTK -->
+    <circle cx="950" cy="360" r="25" fill="#2d8659"/>
+    <text x="950" y="367" text-anchor="middle" font-size="10" font-weight="bold" fill="white">NLTK</text>
+    <text x="950" y="395" text-anchor="middle" font-size="9" fill="#374151">NLP</text>
+    
+    <!-- Docker -->
+    <circle cx="700" cy="440" r="25" fill="#2496ed"/>
+    <text x="700" y="447" text-anchor="middle" font-size="10" font-weight="bold" fill="white">Docker</text>
+    <text x="700" y="475" text-anchor="middle" font-size="9" fill="#374151">Container</text>
+    
+    <!-- Pandas -->
+    <circle cx="800" cy="440" r="25" fill="#150458"/>
+    <text x="800" y="447" text-anchor="middle" font-size="10" font-weight="bold" fill="white">Pandas</text>
+    <text x="800" y="475" text-anchor="middle" font-size="9" fill="#374151">Data Proc</text>
+  </g>
+  
+  <!-- Arrow marker definition -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#64748b"/>
+    </marker>
+  </defs>
+</svg>
