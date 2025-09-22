@@ -1,244 +1,171 @@
 <svg viewBox="0 0 1200 900" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <!-- Gradients -->
-    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#667eea;stop-opacity:0.1"/>
-      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:0.1"/>
-    </linearGradient>
-    
-    <linearGradient id="startGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#4ade80"/>
-      <stop offset="100%" style="stop-color:#22c55e"/>
-    </linearGradient>
-    
-    <linearGradient id="inputGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#60a5fa"/>
-      <stop offset="100%" style="stop-color:#3b82f6"/>
-    </linearGradient>
-    
-    <linearGradient id="preprocessGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#fbbf24"/>
-      <stop offset="100%" style="stop-color:#f59e0b"/>
-    </linearGradient>
-    
-    <linearGradient id="featureGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#a78bfa"/>
-      <stop offset="100%" style="stop-color:#8b5cf6"/>
-    </linearGradient>
-    
-    <linearGradient id="mlGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#f87171"/>
-      <stop offset="100%" style="stop-color:#ef4444"/>
-    </linearGradient>
-    
-    <linearGradient id="resultGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#34d399"/>
-      <stop offset="100%" style="stop-color:#10b981"/>
-    </linearGradient>
-    
-    <!-- Shadows -->
-    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#000000" flood-opacity="0.15"/>
-    </filter>
-    
-    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
-      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
-      <feMerge>
-        <feMergeNode in="coloredBlur"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
-    </filter>
-    
     <!-- Arrow marker -->
-    <marker id="arrowhead" markerWidth="12" markerHeight="8" refX="11" refY="4" orient="auto" markerUnits="strokeWidth">
-      <polygon points="0 0, 12 4, 0 8" fill="url(#arrowGradient)"/>
+    <marker id="arrowhead" markerWidth="12" markerHeight="8" refX="11" refY="4" orient="auto">
+      <polygon points="0 0, 12 4, 0 8" fill="#6366f1"/>
     </marker>
-    
-    <linearGradient id="arrowGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" style="stop-color:#6366f1"/>
-      <stop offset="100%" style="stop-color:#8b5cf6"/>
-    </linearGradient>
   </defs>
   
   <!-- Background -->
-  <rect width="1200" height="900" fill="url(#bgGradient)"/>
+  <rect width="1200" height="900" fill="#f8fafc"/>
   
   <!-- Decorative background elements -->
-  <circle cx="100" cy="150" r="40" fill="#667eea" opacity="0.05"/>
-  <circle cx="1100" cy="200" r="60" fill="#764ba2" opacity="0.05"/>
-  <circle cx="150" cy="700" r="35" fill="#4ade80" opacity="0.05"/>
-  <circle cx="1050" cy="750" r="45" fill="#f59e0b" opacity="0.05"/>
+  <circle cx="100" cy="150" r="40" fill="#e0e7ff" opacity="0.6"/>
+  <circle cx="1100" cy="200" r="60" fill="#fce7f3" opacity="0.6"/>
+  <circle cx="150" cy="700" r="35" fill="#dcfce7" opacity="0.6"/>
+  <circle cx="1050" cy="750" r="45" fill="#fef3c7" opacity="0.6"/>
   
-  <!-- Title -->
-  <text x="600" y="50" text-anchor="middle" font-family="'Segoe UI', system-ui, sans-serif" font-size="32" font-weight="700" fill="#1e293b" filter="url(#glow)">
+  <!-- Title Section -->
+  <rect x="200" y="20" width="800" height="80" rx="20" fill="#1e293b"/>
+  <text x="600" y="50" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="white">
     🛡️ Spam Detection Workflow Pipeline
   </text>
-  <text x="600" y="75" text-anchor="middle" font-family="'Segoe UI', system-ui, sans-serif" font-size="14" fill="#64748b">
+  <text x="600" y="75" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#94a3b8">
     Advanced ML-Powered SMS Classification System
   </text>
   
   <!-- Main Workflow Steps -->
   
   <!-- Step 1: Start -->
-  <g filter="url(#shadow)">
-    <circle cx="600" cy="130" r="35" fill="url(#startGradient)"/>
-    <text x="600" y="138" text-anchor="middle" font-family="'Segoe UI', system-ui, sans-serif" font-size="16" font-weight="700" fill="white">START</text>
-  </g>
+  <circle cx="600" cy="140" r="35" fill="#22c55e" stroke="#16a34a" stroke-width="3"/>
+  <text x="600" y="148" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white">START</text>
   
-  <!-- Animated arrow -->
-  <path d="M600 165 L600 195" stroke="url(#arrowGradient)" stroke-width="4" fill="none" marker-end="url(#arrowhead)">
-    <animate attributeName="stroke-dasharray" values="0,10;10,0;0,10" dur="2s" repeatCount="indefinite"/>
-  </path>
+  <!-- Arrow -->
+  <path d="M600 175 L600 195" stroke="#6366f1" stroke-width="4" fill="none" marker-end="url(#arrowhead)"/>
   
   <!-- Step 2: User Input -->
-  <g filter="url(#shadow)">
-    <rect x="450" y="205" width="300" height="80" rx="40" fill="url(#inputGradient)"/>
-    <text x="480" y="230" font-family="'Segoe UI', system-ui, sans-serif" font-size="18" font-weight="600" fill="white">📱 User Input</text>
-    <text x="480" y="250" font-family="'Segoe UI', system-ui, sans-serif" font-size="13" fill="#e0e7ff">Enter SMS message via</text>
-    <text x="480" y="270" font-family="'Segoe UI', system-ui, sans-serif" font-size="13" fill="#e0e7ff">Streamlit web interface</text>
-  </g>
+  <rect x="450" y="205" width="300" height="80" rx="25" fill="#3b82f6" stroke="#2563eb" stroke-width="2"/>
+  <text x="480" y="230" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="white">📱 User Input</text>
+  <text x="480" y="250" font-family="Arial, sans-serif" font-size="13" fill="#dbeafe">Enter SMS message via</text>
+  <text x="480" y="270" font-family="Arial, sans-serif" font-size="13" fill="#dbeafe">Streamlit web interface</text>
   
-  <path d="M600 285 L600 315" stroke="url(#arrowGradient)" stroke-width="4" fill="none" marker-end="url(#arrowhead)"/>
+  <path d="M600 285 L600 315" stroke="#6366f1" stroke-width="4" fill="none" marker-end="url(#arrowhead)"/>
   
   <!-- Step 3: Text Preprocessing -->
-  <g filter="url(#shadow)">
-    <rect x="400" y="325" width="400" height="100" rx="25" fill="url(#preprocessGradient)"/>
-    <text x="430" y="350" font-family="'Segoe UI', system-ui, sans-serif" font-size="18" font-weight="600" fill="white">🔧 Text Preprocessing</text>
-    <text x="430" y="370" font-family="'Segoe UI', system-ui, sans-serif" font-size="12" fill="#fef3c7">• Convert to lowercase & remove punctuation</text>
-    <text x="430" y="385" font-family="'Segoe UI', system-ui, sans-serif" font-size="12" fill="#fef3c7">• Tokenization & stop word removal</text>
-    <text x="430" y="400" font-family="'Segoe UI', system-ui, sans-serif" font-size="12" fill="#fef3c7">• Text normalization using NLTK</text>
-    <text x="430" y="415" font-family="'Segoe UI', system-ui, sans-serif" font-size="11" font-weight="500" fill="#fffbeb">Powered by Natural Language Toolkit</text>
-  </g>
+  <rect x="400" y="325" width="400" height="100" rx="25" fill="#f59e0b" stroke="#d97706" stroke-width="2"/>
+  <text x="430" y="350" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="white">🔧 Text Preprocessing</text>
+  <text x="430" y="370" font-family="Arial, sans-serif" font-size="12" fill="#fef3c7">• Convert to lowercase &amp; remove punctuation</text>
+  <text x="430" y="385" font-family="Arial, sans-serif" font-size="12" fill="#fef3c7">• Tokenization &amp; stop word removal</text>
+  <text x="430" y="400" font-family="Arial, sans-serif" font-size="12" fill="#fef3c7">• Text normalization using NLTK</text>
+  <text x="430" y="415" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#fffbeb">Powered by Natural Language Toolkit</text>
   
-  <path d="M600 425 L600 455" stroke="url(#arrowGradient)" stroke-width="4" fill="none" marker-end="url(#arrowhead)"/>
+  <path d="M600 425 L600 455" stroke="#6366f1" stroke-width="4" fill="none" marker-end="url(#arrowhead)"/>
   
   <!-- Step 4: Feature Extraction -->
-  <g filter="url(#shadow)">
-    <rect x="425" y="465" width="350" height="90" rx="25" fill="url(#featureGradient)"/>
-    <text x="455" y="490" font-family="'Segoe UI', system-ui, sans-serif" font-size="18" font-weight="600" fill="white">🔍 Feature Extraction</text>
-    <text x="455" y="510" font-family="'Segoe UI', system-ui, sans-serif" font-size="12" fill="#e9d5ff">• TF-IDF Vectorization</text>
-    <text x="455" y="525" font-family="'Segoe UI', system-ui, sans-serif" font-size="12" fill="#e9d5ff">• Convert text to numerical feature vectors</text>
-    <text x="455" y="545" font-family="'Segoe UI', system-ui, sans-serif" font-size="11" font-weight="500" fill="#f3e8ff">Transform words into machine-readable format</text>
-  </g>
+  <rect x="425" y="465" width="350" height="90" rx="25" fill="#8b5cf6" stroke="#7c3aed" stroke-width="2"/>
+  <text x="455" y="490" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="white">🔍 Feature Extraction</text>
+  <text x="455" y="510" font-family="Arial, sans-serif" font-size="12" fill="#e9d5ff">• TF-IDF Vectorization</text>
+  <text x="455" y="525" font-family="Arial, sans-serif" font-size="12" fill="#e9d5ff">• Convert text to numerical feature vectors</text>
+  <text x="455" y="545" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#f3e8ff">Transform words into machine-readable format</text>
   
-  <path d="M600 555 L600 585" stroke="url(#arrowGradient)" stroke-width="4" fill="none" marker-end="url(#arrowhead)"/>
+  <path d="M600 555 L600 585" stroke="#6366f1" stroke-width="4" fill="none" marker-end="url(#arrowhead)"/>
   
   <!-- Step 5: ML Classification -->
-  <g filter="url(#shadow)">
-    <rect x="425" y="595" width="350" height="90" rx="25" fill="url(#mlGradient)"/>
-    <text x="455" y="620" font-family="'Segoe UI', system-ui, sans-serif" font-size="18" font-weight="600" fill="white">🤖 ML Model Prediction</text>
-    <text x="455" y="640" font-family="'Segoe UI', system-ui, sans-serif" font-size="12" fill="#fee2e2">• Advanced Scikit-learn classifier</text>
-    <text x="455" y="655" font-family="'Segoe UI', system-ui, sans-serif" font-size="12" fill="#fee2e2">• Binary classification: SPAM vs HAM</text>
-    <text x="455" y="675" font-family="'Segoe UI', system-ui, sans-serif" font-size="11" font-weight="500" fill="#fef2f2">Trained on 5,000+ messages with 98% accuracy</text>
-  </g>
+  <rect x="425" y="595" width="350" height="90" rx="25" fill="#ef4444" stroke="#dc2626" stroke-width="2"/>
+  <text x="455" y="620" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="white">🤖 ML Model Prediction</text>
+  <text x="455" y="640" font-family="Arial, sans-serif" font-size="12" fill="#fee2e2">• Advanced Scikit-learn classifier</text>
+  <text x="455" y="655" font-family="Arial, sans-serif" font-size="12" fill="#fee2e2">• Binary classification: SPAM vs HAM</text>
+  <text x="455" y="675" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#fef2f2">Trained on 5,000+ messages with 98% accuracy</text>
   
-  <path d="M600 685 L600 715" stroke="url(#arrowGradient)" stroke-width="4" fill="none" marker-end="url(#arrowhead)"/>
+  <path d="M600 685 L600 715" stroke="#6366f1" stroke-width="4" fill="none" marker-end="url(#arrowhead)"/>
   
   <!-- Step 6: Result Display -->
-  <g filter="url(#shadow)">
-    <rect x="450" y="725" width="300" height="80" rx="40" fill="url(#resultGradient)"/>
-    <text x="480" y="750" font-family="'Segoe UI', system-ui, sans-serif" font-size="18" font-weight="600" fill="white">📊 Results Display</text>
-    <text x="480" y="770" font-family="'Segoe UI', system-ui, sans-serif" font-size="13" fill="#dcfce7">Classification result with</text>
-    <text x="480" y="790" font-family="'Segoe UI', system-ui, sans-serif" font-size="13" fill="#dcfce7">confidence score & analytics</text>
-  </g>
+  <rect x="450" y="725" width="300" height="80" rx="25" fill="#10b981" stroke="#059669" stroke-width="2"/>
+  <text x="480" y="750" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="white">📊 Results Display</text>
+  <text x="480" y="770" font-family="Arial, sans-serif" font-size="13" fill="#dcfce7">Classification result with</text>
+  <text x="480" y="790" font-family="Arial, sans-serif" font-size="13" fill="#dcfce7">confidence score &amp; analytics</text>
   
   <!-- Left Panel: Technical Details -->
-  <g filter="url(#shadow)">
-    <rect x="30" y="180" width="320" height="520" rx="20" fill="rgba(248, 250, 252, 0.95)" stroke="#e2e8f0" stroke-width="2"/>
-    
-    <!-- Panel Header -->
-    <rect x="30" y="180" width="320" height="60" rx="20" fill="linear-gradient(135deg, #667eea 0%, #764ba2 100%)"/>
-    <text x="190" y="215" text-anchor="middle" font-family="'Segoe UI', system-ui, sans-serif" font-size="18" font-weight="700" fill="white">⚙️ Technical Insights</text>
-    
-    <!-- Sample Processing -->
-    <rect x="50" y="260" width="280" height="120" rx="15" fill="#f0f9ff" stroke="#0ea5e9" stroke-width="1"/>
-    <text x="190" y="285" text-anchor="middle" font-family="'Segoe UI', system-ui, sans-serif" font-size="14" font-weight="600" fill="#0c4a6e">📝 Sample Processing</text>
-    
-    <text x="60" y="305" font-family="'Courier New', monospace" font-size="10" fill="#374151">Input:</text>
-    <text x="60" y="320" font-family="'Courier New', monospace" font-size="9" fill="#0ea5e9">"FREE msg: Txt STOP to opt out"</text>
-    
-    <text x="60" y="340" font-family="'Courier New', monospace" font-size="10" fill="#374151">Processed:</text>
-    <text x="60" y="355" font-family="'Courier New', monospace" font-size="9" fill="#0ea5e9">["free", "msg", "txt", "stop", "opt"]</text>
-    
-    <text x="60" y="370" font-family="'Courier New', monospace" font-size="10" fill="#374151">Features: [0.42, 0.31, 0.15, ...]</text>
-    
-    <!-- Model Stats -->
-    <rect x="50" y="400" width="280" height="130" rx="15" fill="#fff7ed" stroke="#f97316" stroke-width="1"/>
-    <text x="190" y="425" text-anchor="middle" font-family="'Segoe UI', system-ui, sans-serif" font-size="14" font-weight="600" fill="#c2410c">📊 Model Performance</text>
-    
-    <text x="60" y="445" font-family="'Segoe UI', system-ui, sans-serif" font-size="11" fill="#374151">🎯 Algorithm: Naive Bayes + SVM Ensemble</text>
-    <text x="60" y="460" font-family="'Segoe UI', system-ui, sans-serif" font-size="11" fill="#374151">📚 Training Dataset: 5,574 labeled messages</text>
-    <text x="60" y="475" font-family="'Segoe UI', system-ui, sans-serif" font-size="11" fill="#374151">✅ Accuracy: 98.2% (Cross-validated)</text>
-    <text x="60" y="490" font-family="'Segoe UI', system-ui, sans-serif" font-size="11" fill="#374151">⚡ Inference Time: ~50ms average</text>
-    <text x="60" y="505" font-family="'Segoe UI', system-ui, sans-serif" font-size="11" fill="#374151">🔢 Feature Dimensions: 5,000+ TF-IDF</text>
-    <text x="60" y="520" font-family="'Segoe UI', system-ui, sans-serif" font-size="11" fill="#374151">🎨 False Positive Rate: < 2%</text>
-    
-    <!-- Live Example -->
-    <rect x="50" y="550" width="280" height="120" rx="15" fill="#f0fdf4" stroke="#22c55e" stroke-width="1"/>
-    <text x="190" y="575" text-anchor="middle" font-family="'Segoe UI', system-ui, sans-serif" font-size="14" font-weight="600" fill="#166534">🎯 Live Results</text>
-    
-    <rect x="65" y="585" width="100" height="25" rx="12" fill="#dc2626"/>
-    <text x="115" y="602" text-anchor="middle" font-family="'Segoe UI', system-ui, sans-serif" font-size="11" font-weight="600" fill="white">SPAM</text>
-    
-    <text x="180" y="602" font-family="'Segoe UI', system-ui, sans-serif" font-size="11" fill="#374151">Confidence: 94.7%</text>
-    
-    <text x="65" y="620" font-family="'Segoe UI', system-ui, sans-serif" font-size="10" fill="#374151">Key indicators: "free", "opt out", urgency</text>
-    <text x="65" y="635" font-family="'Segoe UI', system-ui, sans-serif" font-size="10" fill="#374151">Processing time: 47ms</text>
-    <text x="65" y="650" font-family="'Segoe UI', system-ui, sans-serif" font-size="10" fill="#374151">Risk score: High (0.947/1.000)</text>
-  </g>
+  <rect x="30" y="180" width="320" height="520" rx="15" fill="white" stroke="#e2e8f0" stroke-width="2"/>
+  
+  <!-- Panel Header -->
+  <rect x="30" y="180" width="320" height="50" rx="15" fill="#4338ca"/>
+  <text x="190" y="210" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white">⚙️ Technical Insights</text>
+  
+  <!-- Sample Processing -->
+  <rect x="50" y="250" width="280" height="120" rx="10" fill="#f0f9ff" stroke="#0ea5e9" stroke-width="1"/>
+  <text x="190" y="270" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#0c4a6e">📝 Sample Processing</text>
+  
+  <text x="60" y="290" font-family="monospace" font-size="10" font-weight="bold" fill="#374151">Input:</text>
+  <text x="60" y="305" font-family="monospace" font-size="9" fill="#0ea5e9">"FREE msg: Txt STOP to opt out"</text>
+  
+  <text x="60" y="325" font-family="monospace" font-size="10" font-weight="bold" fill="#374151">Processed:</text>
+  <text x="60" y="340" font-family="monospace" font-size="9" fill="#0ea5e9">["free", "msg", "txt", "stop", "opt"]</text>
+  
+  <text x="60" y="355" font-family="monospace" font-size="9" fill="#374151">Features: [0.42, 0.31, 0.15, ...]</text>
+  
+  <!-- Model Stats -->
+  <rect x="50" y="385" width="280" height="130" rx="10" fill="#fff7ed" stroke="#f97316" stroke-width="1"/>
+  <text x="190" y="405" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#c2410c">📊 Model Performance</text>
+  
+  <text x="60" y="425" font-family="Arial, sans-serif" font-size="11" fill="#374151">🎯 Algorithm: Naive Bayes + SVM</text>
+  <text x="60" y="440" font-family="Arial, sans-serif" font-size="11" fill="#374151">📚 Training: 5,574 labeled messages</text>
+  <text x="60" y="455" font-family="Arial, sans-serif" font-size="11" fill="#374151">✅ Accuracy: 98.2% (Cross-validated)</text>
+  <text x="60" y="470" font-family="Arial, sans-serif" font-size="11" fill="#374151">⚡ Speed: ~50ms average</text>
+  <text x="60" y="485" font-family="Arial, sans-serif" font-size="11" fill="#374151">🔢 Features: 5,000+ TF-IDF</text>
+  <text x="60" y="500" font-family="Arial, sans-serif" font-size="11" fill="#374151">🎨 False Positive: &lt; 2%</text>
+  
+  <!-- Live Example -->
+  <rect x="50" y="530" width="280" height="110" rx="10" fill="#f0fdf4" stroke="#22c55e" stroke-width="1"/>
+  <text x="190" y="550" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#166534">🎯 Live Results</text>
+  
+  <rect x="65" y="565" width="80" height="20" rx="10" fill="#dc2626"/>
+  <text x="105" y="578" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="white">SPAM</text>
+  
+  <text x="155" y="578" font-family="Arial, sans-serif" font-size="11" fill="#374151">Confidence: 94.7%</text>
+  
+  <text x="65" y="595" font-family="Arial, sans-serif" font-size="10" fill="#374151">Key indicators: "free", "opt out"</text>
+  <text x="65" y="610" font-family="Arial, sans-serif" font-size="10" fill="#374151">Processing time: 47ms</text>
+  <text x="65" y="625" font-family="Arial, sans-serif" font-size="10" fill="#374151">Risk score: High (0.947/1.000)</text>
   
   <!-- Right Panel: Technology Stack -->
-  <g filter="url(#shadow)">
-    <rect x="850" y="180" width="320" height="520" rx="20" fill="rgba(248, 250, 252, 0.95)" stroke="#e2e8f0" stroke-width="2"/>
-    
-    <!-- Panel Header -->
-    <rect x="850" y="180" width="320" height="60" rx="20" fill="linear-gradient(135deg, #ec4899 0%, #8b5cf6 100%)"/>
-    <text x="1010" y="215" text-anchor="middle" font-family="'Segoe UI', system-ui, sans-serif" font-size="18" font-weight="700" fill="white">🚀 Tech Stack Flow</text>
-    
-    <!-- Tech Stack Items -->
-    <g>
-      <!-- Streamlit UI -->
-      <rect x="870" y="270" width="280" height="50" rx="10" fill="linear-gradient(135deg, #ff4b4b 0%, #ff6b6b 100%)" filter="url(#shadow)"/>
-      <text x="895" y="290" font-family="'Segoe UI', system-ui, sans-serif" font-size="12" font-weight="600" fill="white">🎨 Streamlit</text>
-      <text x="895" y="305" font-family="'Segoe UI', system-ui, sans-serif" font-size="10" fill="#ffe4e4">Interactive Web Interface & Real-time UI</text>
-      
-      <path d="M1010 320 L1010 340" stroke="#8b5cf6" stroke-width="3" fill="none" marker-end="url(#arrowhead)"/>
-      
-      <!-- NLTK Processing -->
-      <rect x="870" y="350" width="280" height="50" rx="10" fill="linear-gradient(135deg, #059669 0%, #10b981 100%)" filter="url(#shadow)"/>
-      <text x="895" y="370" font-family="'Segoe UI', system-ui, sans-serif" font-size="12" font-weight="600" fill="white">🔤 NLTK</text>
-      <text x="895" y="385" font-family="'Segoe UI', system-ui, sans-serif" font-size="10" fill="#d1fae5">Advanced Natural Language Processing</text>
-      
-      <path d="M1010 400 L1010 420" stroke="#8b5cf6" stroke-width="3" fill="none" marker-end="url(#arrowhead)"/>
-      
-      <!-- Pandas Data -->
-      <rect x="870" y="430" width="280" height="50" rx="10" fill="linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%)" filter="url(#shadow)"/>
-      <text x="895" y="450" font-family="'Segoe UI', system-ui, sans-serif" font-size="12" font-weight="600" fill="white">📊 Pandas</text>
-      <text x="895" y="465" font-family="'Segoe UI', system-ui, sans-serif" font-size="10" fill="#dbeafe">Efficient Data Manipulation & Analysis</text>
-      
-      <path d="M1010 480 L1010 500" stroke="#8b5cf6" stroke-width="3" fill="none" marker-end="url(#arrowhead)"/>
-      
-      <!-- Scikit-learn ML -->
-      <rect x="870" y="510" width="280" height="50" rx="10" fill="linear-gradient(135deg, #f97316 0%, #fb923c 100%)" filter="url(#shadow)"/>
-      <text x="895" y="530" font-family="'Segoe UI', system-ui, sans-serif" font-size="12" font-weight="600" fill="white">🧠 Scikit-learn</text>
-      <text x="895" y="545" font-family="'Segoe UI', system-ui, sans-serif" font-size="10" fill="#fed7aa">Machine Learning Classification Engine</text>
-      
-      <path d="M1010 560 L1010 580" stroke="#8b5cf6" stroke-width="3" fill="none" marker-end="url(#arrowhead)"/>
-      
-      <!-- Results Back -->
-      <rect x="870" y="590" width="280" height="50" rx="10" fill="linear-gradient(135deg, #7c3aed 0%, #a855f7 100%)" filter="url(#shadow)"/>
-      <text x="895" y="610" font-family="'Segoe UI', system-ui, sans-serif" font-size="12" font-weight="600" fill="white">📈 Analytics Dashboard</text>
-      <text x="895" y="625" font-family="'Segoe UI', system-ui, sans-serif" font-size="10" fill="#e9d5ff">Real-time Results & Confidence Metrics</text>
-    </g>
-    
-    <!-- Performance Badge -->
-    <rect x="870" y="660" width="280" height="30" rx="15" fill="linear-gradient(135deg, #1f2937 0%, #374151 100%)"/>
-    <text x="1010" y="680" text-anchor="middle" font-family="'Segoe UI', system-ui, sans-serif" font-size="12" font-weight="600" fill="white">⚡ Avg Response: 100ms | Memory: 50MB</text>
-  </g>
+  <rect x="850" y="180" width="320" height="520" rx="15" fill="white" stroke="#e2e8f0" stroke-width="2"/>
+  
+  <!-- Panel Header -->
+  <rect x="850" y="180" width="320" height="50" rx="15" fill="#7c3aed"/>
+  <text x="1010" y="210" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white">🚀 Tech Stack Flow</text>
+  
+  <!-- Tech Stack Items -->
+  <!-- Streamlit UI -->
+  <rect x="870" y="250" width="280" height="45" rx="8" fill="#ff4b4b"/>
+  <text x="885" y="270" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white">🎨 Streamlit</text>
+  <text x="885" y="285" font-family="Arial, sans-serif" font-size="10" fill="#ffe4e4">Interactive Web Interface</text>
+  
+  <path d="M1010 295 L1010 315" stroke="#6366f1" stroke-width="3" fill="none" marker-end="url(#arrowhead)"/>
+  
+  <!-- NLTK Processing -->
+  <rect x="870" y="325" width="280" height="45" rx="8" fill="#059669"/>
+  <text x="885" y="345" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white">🔤 NLTK</text>
+  <text x="885" y="360" font-family="Arial, sans-serif" font-size="10" fill="#d1fae5">Natural Language Processing</text>
+  
+  <path d="M1010 370 L1010 390" stroke="#6366f1" stroke-width="3" fill="none" marker-end="url(#arrowhead)"/>
+  
+  <!-- Pandas Data -->
+  <rect x="870" y="400" width="280" height="45" rx="8" fill="#1e3a8a"/>
+  <text x="885" y="420" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white">📊 Pandas</text>
+  <text x="885" y="435" font-family="Arial, sans-serif" font-size="10" fill="#dbeafe">Data Manipulation</text>
+  
+  <path d="M1010 445 L1010 465" stroke="#6366f1" stroke-width="3" fill="none" marker-end="url(#arrowhead)"/>
+  
+  <!-- Scikit-learn ML -->
+  <rect x="870" y="475" width="280" height="45" rx="8" fill="#f97316"/>
+  <text x="885" y="495" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white">🧠 Scikit-learn</text>
+  <text x="885" y="510" font-family="Arial, sans-serif" font-size="10" fill="#fed7aa">ML Classification Engine</text>
+  
+  <path d="M1010 520 L1010 540" stroke="#6366f1" stroke-width="3" fill="none" marker-end="url(#arrowhead)"/>
+  
+  <!-- Results Back -->
+  <rect x="870" y="550" width="280" height="45" rx="8" fill="#7c3aed"/>
+  <text x="885" y="570" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white">📈 Analytics Dashboard</text>
+  <text x="885" y="585" font-family="Arial, sans-serif" font-size="10" fill="#e9d5ff">Results &amp; Metrics</text>
+  
+  <!-- Performance Badge -->
+  <rect x="870" y="620" width="280" height="35" rx="15" fill="#1f2937"/>
+  <text x="1010" y="642" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white">⚡ 100ms Response | 50MB Memory</text>
   
   <!-- Footer -->
-  <rect x="200" y="840" width="800" height="40" rx="20" fill="rgba(30, 41, 59, 0.8)"/>
-  <text x="600" y="865" text-anchor="middle" font-family="'Segoe UI', system-ui, sans-serif" font-size="14" font-weight="500" fill="white">
+  <rect x="200" y="840" width="800" height="35" rx="15" fill="#1e293b"/>
+  <text x="600" y="862" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white">
     🔒 Secure • 🚀 Fast • 🎯 Accurate • Built with Modern ML Best Practices
   </text>
 </svg>
